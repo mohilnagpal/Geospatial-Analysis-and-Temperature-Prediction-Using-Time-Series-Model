@@ -9,16 +9,16 @@ With pre-processing of data some strong insights were prominent,
 Here are some of the observations:
 
 ![image](https://user-images.githubusercontent.com/49190511/117656674-41bcf980-b1b6-11eb-9df4-c7d9173fe8dd.png)
-In this chart we can notice the increase in temperature from 1960s, thus manifesting global warming.
+###### In this chart we can notice the increase in temperature from 1960s, thus manifesting global warming.
 
 ![image](https://user-images.githubusercontent.com/49190511/117657339-14248000-b1b7-11eb-996f-6f8d15b7cb52.png)
-Increase in average temperature of India is evident.
+###### Increase in average temperature of India is evident.
 
 ![image](https://user-images.githubusercontent.com/49190511/117657754-914ff500-b1b7-11eb-832d-401688b2a7e9.png)
-Plotting the average temperature of different states of India on the world map using opencage. The latitudes & longitudes of each state were scrapped from opencagedata.com 
+###### Plotting the average temperature of different states of India on the world map using opencage. The latitudes & longitudes of each state were scrapped from opencagedata.com 
 
 ![image](https://user-images.githubusercontent.com/49190511/117658220-1dfab300-b1b8-11eb-8efe-e14c4cc71ecd.png)
-Creating the heatmap of each state to observe the seasonal trend of India.
+###### Creating the heatmap of each state to observe the seasonal trend of India.
 
 Next step is to test the data for our time series model.
 
@@ -27,8 +27,8 @@ There are two test performed on the data to test the stationarity of the data. A
 The two test were 1) Visualizing the line plot 
                   2) Dickey Fuller test
 
-On the basis of the result of Dickey Fuller test, Differencing of the data is performed. The updated data is passed through the Moving Average & ARIMA models. 
+On the basis of the result of Dickey Fuller test, first order differencing of the data is performed. The updated data is passed through the Moving Average & ARIMA models. 
 The data is passed within a window of 7 steps to the MA model resulting in MSE of 1.20
 
 Then acf, pacf plots were analysed to get the q and p values. These values are passed into the ARIMA model resulting a MSE of 1.46.
-The values passed as p,d,q to the ARIMA model are p=5,d=1,q=9
+The values passed as p,d,q to the ARIMA model are p=5,d=0,q=9
