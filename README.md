@@ -31,11 +31,11 @@ Here are some of the observations:
 
 
 
-Next step is to test the stationarity of the data for our time series model. A stationary process has the property that the mean, variance and autocorrelation structure do not change over time.
+Next step is to test the stationarity of the data for the time series model. A stationary process has the property that the mean, variance and autocorrelation structure do not change over time.
 
 There are two test performed on the data to test it's stationarity . 
-The two test were 1) Visualizing the line plot 
-                  2) Dickey Fuller test
+1) Visualizing the line plot 
+2) Dickey Fuller test
 
 On the basis of the result of Dickey Fuller test, first order differencing of the data is performed. The updated data is passed through the Moving Average & ARIMA models. 
 The data is passed within a window of 7 steps to the MA model resulting in MSE of 1.20
